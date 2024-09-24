@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --no-color 2>output.txt",
+    "test": "jest",
     "start": "webpack-dev-server --mode development --watch --open --hot",
     "build": "webpack --mode production"
   },

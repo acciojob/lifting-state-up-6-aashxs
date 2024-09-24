@@ -1,0 +1,24 @@
+Browserslist: caniuse-lite is outdated. Please run:
+npx browserslist@latest --update-db
+
+Why you should do it regularly:
+https://github.com/browserslist/browserslist#browsers-data-updating
+FAIL src/components/App.test.js
+  ● Test suite failed to run
+
+    Cannot find module '@cypress/react' from 'src/components/App.test.js'
+
+    > 1 | import { mount } from '@cypress/react';
+        | ^
+      2 | import App from '../src/components/App';
+      3 | 
+      4 | describe('Todo App', () => {
+
+      at Resolver.resolveModule (node_modules/jest-resolve/build/index.js:307:11)
+      at Object.<anonymous> (src/components/App.test.js:1:1)
+
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        29.545 s
+Ran all test suites.
