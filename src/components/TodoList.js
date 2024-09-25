@@ -1,17 +1,23 @@
-import React from 'react'
+import React from 'react';
 
-const TodoList = (props) => {
+const TodoList = ({ todos, onComplete }) => {
   return (
     <ul>
-      {props.todos.map((todo)=>(
-        <li key={todo.id}>{todo.task}
-        {!todo.completed && (
-          <button onClick={()=>{props.onComplete(todo.id)}}>Complete</button>
-        )}
+      {todos.map((todo) => (
+        <li key={todo.id}>
+          <span
+            style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}
+          >
+            {todo.text}
+          </span>
+          {/* Render "Complete" button only if the todo is not completed */}
+          {!todo.completed && (
+            <button onClick={() => onComplete(todo.id)}>Complete</button>
+          )}
         </li>
       ))}
     </ul>
-  )
-}
+  );
+};
 
-export default TodoList
+export default TodoList;
